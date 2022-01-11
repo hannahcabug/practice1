@@ -1,0 +1,34 @@
+@mixin sass-button($bg:$bgcolor, $color:#333, $hcolot:black){
+    background-color: $bg;
+    padding: 10px;
+    display: flex;
+    max-width: 150px;
+    border-radius: 5px;
+
+    label{
+        font-size: 15px;
+        color:$color;
+    }
+
+    h3{
+        color: $hcolor;
+    }
+
+    img{
+        object-fit: cover;
+    }
+
+    &:hover{
+        background-color: #FFF;
+    }
+
+    
+}
+
+.sass-button-light{
+    @include sass-button($bg:$bgcolor);
+}
+
+.sass-button-dark{
+    @include sass-button($bg:#333, $color: #FFF, $hcolor: #FFF);
+}
